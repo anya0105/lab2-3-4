@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+<body>
+    <header>
+        <h1>Про нас</h1>
+    <button id="menu-toggle" class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <nav id="main-menu" class="main-menu">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="asorts.html">Асортимент</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Наш магазин</h2>
+        <p>Le Gourmet - Інтернет Магазин Якісного Посуду та Аксесуарів для Дому. Сертифікована Продукція Відомих Українських та Європейських Брендів. Оперативна Доставка.
+        </p>
+    </section>
+    <section>
+        <h2>Наш колектив</h2>
+        <div class="team-member" onclick="showBio(1)">
+            <h3>Діана Костюк</h3>
+        </div>
+        <div class="team-member" onclick="showBio(2)">
+            <h3>Аліна Тусюк</h3>
+        </div>
+        <div class="team-member" onclick="showBio(3)">
+            <h3>Каріна Рибачук</h3>
+        </div>
+    </section>
+    <section id="bio-container">
+        <div id="bio-1" class="frame" style="display: none;">
+            <h3>Діана Костюк</h3>
+            <p>Мене звати Діана .Мені 35 років,Я є власниця магазину "Le Gourmet" </p>
+        </div>
+        <div id="bio-2" class="frame" style="display: none;">
+            <h3>Аліна Тусюк</h3>
+            <p>Мене звати Аліна. Мені 22 роки, з Чернівців. Можете звернутись до мене з будь якими питаннями.
+            </p>
+        </div>
+        <div id="bio-3" class="frame" style="display: none;">
+            <h3>Каріна Рибачук</h3>
+            <p>Каріна, 18 років з Чернівців,допоможу вибрати посуд для дому.
+            </p>
+        </div>
+    </section>
+    <script>
+        function showBio(num) {
+            const bioContainer = document.getElementById('bio-container');
+            for (let i = 1; i <= 3; i++) {
+                const bio = document.getElementById(`bio-${i}`);
+                if (i === num) {
+                    bio.style.display = 'block';
+                } else {
+                    bio.style.display = 'none';
+                }
+            }
+        }
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+    var mainMenu = document.getElementById('main-menu');
+    if (mainMenu.style.display === 'block') {
+        mainMenu.style.display = 'none';
+    } else {
+        mainMenu.style.display = 'block';
+    }
+});
+
+    </script>
+    <script>
+        
+        document.getElementById('scrollToTopButton').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+        });
+        </script>
+</body>
+</div>
+<div class="scroll-to-top">
+    <a href="#" id="scrollToTopButton">↑</a>
+</div>
+</html>

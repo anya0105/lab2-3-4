@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <header>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+<button id="menu-toggle" class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+<nav id="main-menu" class="main-menu">
+    <ul>>
+    <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="asorts.html">Асортимент</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+    </ul>
+</nav>
+</header>
+    </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин посуду</title>
+    <link rel="stylesheet" type="text/css" href="asorts.css">
+    </head>
+<body>
+    <header>
+        <h1>Le Gourmet</h1>
+    </header>
+    <div>
+        <img src="stakan.webp" width=300> 
+        <h3>Стакан "Cristal" 180 грн</h3>
+        <div class="form-mrg">
+      </div>
+        <img src="tarilka.webp" width=300>
+        <h3>Тарілка "White" 150 грн </h3>
+        <div class="form-mrg">
+      </div>
+        <img src="coffecup.jpg" width=300>
+        <h3>Чашка "CoffeCup" 100 грн</h3>   
+        <div class="form-mrg">
+      </div>
+        </section>
+   <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        var mainMenu = document.getElementById('main-menu');
+        if (mainMenu.style.display === 'block') {
+            mainMenu.style.display = 'none';
+        } else {
+            mainMenu.style.display = 'block';
+        }
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+    var frames = document.querySelectorAll('.frame');
+
+    frames.forEach(function (frame) {
+        frame.addEventListener('click', function () {
+            var asorts = frame.getAttribute('data-asorts');
+            alert('Ви вибрали ' + asorts + '!');
+        });
+    });
+});
+
+</script>
+</body>
+</html>
